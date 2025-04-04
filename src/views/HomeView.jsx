@@ -8,6 +8,7 @@ import Footer from "../components/Footer.jsx";
 import Main from "../components/Main.jsx";
 import About from '../components/About';
 
+
 const HomeView = () => {
     return (
         <div>
@@ -15,6 +16,7 @@ const HomeView = () => {
                 <Intro />
                 <About />
                 <Skill />
+               
                 <Site />
                 <Port />
                 <Contact />

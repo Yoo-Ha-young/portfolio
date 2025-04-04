@@ -1,6 +1,37 @@
 #header {
     @include position-fixed;
     z-index: 10000;
+    transition: all 0.3s ease;
+
+    &.scrolled {
+        .header__inner {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+            .header__nav ul li a {
+                color: var(--black);
+
+                &:hover {
+                    color: #FFD700;
+                }
+
+                &::before {
+                    background-color: #FFD700;
+                }
+            }
+
+            .header__nav__mobile span,
+            .header__nav__mobile span::before,
+            .header__nav__mobile span::after {
+                background-color: var(--black);
+            }
+
+            @media (max-width: 800px) {
+                background-color: transparent;
+                box-shadow: none;
+            }
+        }
+    }
 }
 
 .header__inner {
