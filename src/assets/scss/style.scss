@@ -8,9 +8,12 @@
 
 // layout
 @import "section/header";
-// @import "section/intro";
+@import './section/_intro.scss';
+@import './section/_about.scss';
 // @import "section/skill";
 // @import "section/site";
 // @import "section/port";
 // @import "section/contact";
 // @import "section/footer";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');

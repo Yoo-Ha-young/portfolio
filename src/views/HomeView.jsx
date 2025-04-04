@@ -6,12 +6,14 @@ import Port from "../components/Port.jsx";
 import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.jsx";
 import Main from "../components/Main.jsx";
+import About from '../components/About';
 
 const HomeView = () => {
     return (
         <div>
             <Main>
                 <Intro />
+                <About />
                 <Skill />
                 <Site />
                 <Port />
