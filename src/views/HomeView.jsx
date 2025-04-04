@@ -7,16 +7,18 @@ import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.jsx";
 import Main from "../components/Main.jsx";
 import About from '../components/About';
-
+import Project from '../components/Project';
+import Header from "../components/Header.jsx";
 
 const HomeView = () => {
     return (
         <div>
+            <Header />
             <Main>
                 <Intro />
                 <About />
                 <Skill />
-               
+                <Project />
                 <Site />
                 <Port />
                 <Contact />
