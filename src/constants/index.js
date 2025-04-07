@@ -155,7 +155,7 @@ export const projectText = {
                     "프로젝트 필터링 기능"
                 ],
                 tech: ["React", "JavaScript", "SCSS", "GSAP", "React Router", "Vite", "GitHub Pages"],
-                github: "https://github.com/Yoo-Ha-young/port2025-react",
+                github: "https://github.com/Yoo-Ha-young/portfolio",
                 
                 media: [
                   { "type": "image", "src": "/images/projects/portfolio.jpg", "alt": "청년 정책 추천 서비스" },
