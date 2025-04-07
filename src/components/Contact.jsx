@@ -23,7 +23,7 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('http://localhost:5000/api/send-email', {
+            const response = await fetch('http://localhost:8888/.netlify/functions/sendEmail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -31,22 +31,21 @@ const Contact = () => {
                 body: JSON.stringify(formData),
             });
 
-            const data = await response.json();
-
-            if (response.ok) {
-                alert(data.message);
-                setFormData({
-                    name: "",
-                    email: "",
-                    subject: "",
-                    message: ""
-                });
-            } else {
-                throw new Error(data.message);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+
+            const data = await response.json();
+            alert(data.message);
+            setFormData({
+                name: "",
+                email: "",
+                subject: "",
+                message: ""
+            });
         } catch (error) {
-            alert('이메일 전송에 실패했습니다. 다시 시도해주세요.');
             console.error('Error:', error);
+            alert('이메일 전송에 실패했습니다. 다시 시도해주세요.');
         } finally {
             setIsSubmitting(false);
         }
