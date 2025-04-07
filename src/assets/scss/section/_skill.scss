@@ -1,7 +1,7 @@
 #skill {
     background-color: var(--white);
     color: #212529;
-    padding: 100px 0;
+    padding: 4rem 0;
     position: relative;
 
     @media (max-width: 768px) {
@@ -11,7 +11,7 @@
     .skill__inner {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 2rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -23,8 +23,10 @@
         .skill__title {
             font-size: 2.5rem;
             font-weight: 700;
+            margin-bottom: 3rem;
             text-align: center;
-            margin-bottom: 50px;
+            color: var(--black);
+            font-family: var(--main-font);
             position: relative;
 
             &::after {

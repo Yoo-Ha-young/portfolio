@@ -28,7 +28,17 @@ const About = () => {
                                     {key === '학력' && <Mortarboard />}
                                     {key}
                                 </div>
-                                <div className="info__value">{value}</div>
+                                <div className="info__value">
+                                    {Array.isArray(value) ? (
+                                        <ul>
+                                            {value.map((item, idx) => (
+                                                <li key={idx}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        value
+                                    )}
+                                </div>
                             </div>
                         ))}
                     </div>

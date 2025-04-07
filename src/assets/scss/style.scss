@@ -2,7 +2,7 @@
 
 // setting
 @import "setting/fonts";
-@import "setting/vars";
+@import "./setting/vars.scss";
 @import "setting/reset";
 @import "setting/mixin";
 
@@ -13,7 +13,9 @@
 @import "./section/skill";
 @import "./section/bootcamp";
 @import "./section/project";
-@import "./section/_project-detail.scss";
+@import "./section/_projectDetail.scss";
+@import "section/_footer";
+@import "section/_contact";
 // @import "section/site";
 // @import "section/port";
 // @import "section/contact";

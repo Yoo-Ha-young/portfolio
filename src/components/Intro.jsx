@@ -38,7 +38,7 @@ const Intro = () => {
                     <p className="intro__text" dangerouslySetInnerHTML={{ __html: introText.description }}></p>
                     <div className="intro__buttons">
                         <a href={introText.links.github} className="btn" target="_blank" rel="noreferrer">GITHUB</a>
-                        <a href={introText.links.demo} className="btn" target="_blank" rel="noreferrer">VIEW</a>
+                        <a href={introText.links.portfolio} className="btn" target="_blank" rel="noreferrer">NOTION</a>
                     </div>
                 </div>
             </div>

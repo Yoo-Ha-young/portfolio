@@ -1,22 +1,44 @@
 :root {
-    --mainEng-font: "Montserrat";
-    --mainKor-font: "nanumSquareNeo";
+    // Fonts
+    --mainEng-font: 'Noto Sans';
+    --mainKor-font: 'Noto Sans KR';
     --mainNum-font: "gmarket";
-  
+    
+    // Colors
+    --black: #000;
+    --black100: #2b2b2b;
+    --black200: #434343;
+    --black300: #686868;
+    --black400: #e0e0e0;
+    --black500: #b5b5b5;
+    --black600: #a5a5a5;
+    --black700: #959595;
+    --black800: #858585;
+    --black900: #757575;
+    --black50: #fafafa;
+    --white: #fff;
+    --white100: #f5f5f5;
+    --white200: #e5e5e5;
+    --white300: #d5d5d5;
+    --white400: #c5c5c5;
+    --white500: #b5b5b5;
+    --white600: #a5a5a5;
+    --white700: #959595;
+    --white800: #858585;
+    --white900: #757575;
+
+    // Background Colors
     --mainBg-color: #ffffff;
     --subBg100: #cdc0b1;
     --subBg200: #afa395;
     --subBg300: #81887c;
     --subBg400: #afa7a2;
     --subBg500: #a6afa2;
-  
-    --white: #fff;
-    --black: #000;
-    --black100: #2b2b2b;
-    --black200: #434343;
-    --black300: #686868;
-    --black400: #e0e0e0;
-  
+
+    // Point Colors
+    --point-color: #FFD700;
+    --point-color-dark: #FFC000;
+
     /* 기본 폰트 설정 */
     font-family: var(--mainEng-font), var(--mainKor-font);
     font-size: 16px;
@@ -43,4 +65,4 @@
 body {
     color: var(--black100);
     background-color: var(--mainBg-color);
-}
+} 

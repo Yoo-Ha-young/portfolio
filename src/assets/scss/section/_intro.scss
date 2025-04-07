@@ -1,5 +1,5 @@
 #intro {
-    height: 100vh;
+    height: 80vh;
     background-color: var(--black);
     color: var(--white);
     padding-top: 200px;
@@ -42,14 +42,15 @@
 
 .intro__inner {
     width: 100%;
-    height: calc(100vh - 200px);
+    height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 16px;
+    position: relative;
+    padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
     z-index: 1;
 
     @media (max-width: 800px) {
@@ -107,10 +108,12 @@
         margin-bottom: 2rem;
         position: relative;
         padding-top: 2rem;
+        padding-bottom: 2rem;
 
         @media (max-width: 800px) {
             margin-bottom: 1rem;
             padding-top: 1rem;
+            padding-bottom: 1rem;
         }
 
         &::before {
@@ -148,6 +151,8 @@
             display: flex;
             gap: 1rem;
             margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
 
             @media (max-width: 800px) {
                 gap: 0.8rem;
@@ -161,10 +166,14 @@
                 text-decoration: none;
                 transition: all 0.3s;
                 font-weight: 500;
+                white-space: nowrap;
+                text-align: center;
+                min-width: 120px;
 
                 @media (max-width: 800px) {
                     padding: 0.8rem 1.5rem;
                     font-size: 0.9rem;
+                    min-width: 100px;
                 }
 
                 &:hover {
@@ -173,6 +182,13 @@
                 }
             }
         }
+    }
+
+    .intro__links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        padding-bottom: 3rem;
     }
 }
 
