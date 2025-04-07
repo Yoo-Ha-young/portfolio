@@ -23,7 +23,7 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('http://localhost:8888/.netlify/functions/sendEmail', {
+            const response = await fetch('/.netlify/functions/sendEmail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
