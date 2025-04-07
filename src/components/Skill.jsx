@@ -18,12 +18,15 @@ const Skill = () => {
             { threshold: 0.5 }
         );
 
-        skillRefs.current.forEach((ref) => {
+        // 현재의 skillRefs.current 값을 로컬 변수에 저장
+        const currentRefs = skillRefs.current;
+
+        currentRefs.forEach((ref) => {
             if (ref) observer.observe(ref);
         });
 
         return () => {
-            skillRefs.current.forEach((ref) => {
+            currentRefs.forEach((ref) => {
                 if (ref) observer.unobserve(ref);
             });
         };
@@ -45,7 +48,10 @@ const Skill = () => {
                                         ref={(el) => (skillRefs.current[itemIndex] = el)}
                                     >
                                         <div className="skill__name">{item.name}</div>
-                                        <div className={`skill__level ${item.level}`}>
+                                        <div 
+                                            className={`skill__level ${item.level}`} 
+                                            data-level={item.level}
+                                        >
                                             {item.level === 'familiar' ? 'Familiar' : 'Tried'}
                                         </div>
                                     </div>

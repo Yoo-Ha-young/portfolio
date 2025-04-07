@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-
-import about from "../assets/img/about.jpg";
-
 import { introText } from "../constants";
 
 const Intro = () => {
