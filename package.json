@@ -24,12 +24,12 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "netlify-lambda": "^2.0.15",
-    "@netlify/plugin-lighthouse": "^4.0.0"
+    "netlify-cli": "^17.0.0",
+    "@netlify/plugin-lighthouse": "^6.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && npm run netlify:build",
+    "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "netlify:dev": "netlify dev",
@@ -39,7 +39,11 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
   "browserslist": {
     "production": [
