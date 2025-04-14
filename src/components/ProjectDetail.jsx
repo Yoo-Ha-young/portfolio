@@ -110,18 +110,20 @@ const ProjectDetail = () => {
                     )}
                 </div>
 
-                <div className="project-detail__section">
-                    <h3>프로젝트 주요 기능</h3>
-                    <ul className="project__detail-list">
-                        {project.features.map((feature, index) => (
-                            <li key={index} className="project__detail-item">
-                                {feature}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                {project.features && (
+                    <div className="project-detail__section">
+                        <h3>프로젝트 주요 기능</h3>
+                        <ul className="project__detail-list">
+                            {project.features.map((feature, index) => (
+                                <li key={index} className="project__detail-item">
+                                    {feature}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
 
-                {project.type === "팀 프로젝트" && (
+                {project.type === "팀 프로젝트" && project.myRole?.features && (
                     <div className="project-detail__section">
                         <h3>내가 구현한 기능</h3>
                         <ul>
@@ -132,21 +134,97 @@ const ProjectDetail = () => {
                     </div>
                 )}
 
-                {project.type === "팀 프로젝트" && project.myRole.troubleshooting && (
+                {project.type === "팀 프로젝트" && project.myRole?.troubleshooting ? (
                     <div className="project-detail__section">
-                        <h3>{project.myRole.troubleshooting.title}</h3>
-                        {project.myRole.troubleshooting.items.map((item, index) => (
-                            <div key={index}>
-                                <h4>{item.problem}</h4>
-                                <p>{item.solution}</p>
-                            </div>
-                        ))}
+                        <h3>트러블 슈팅</h3>
+                        <div className="troubleshooting__list">
+                            {project.myRole.troubleshooting.map((item, index) => (
+                                <div key={index} className="troubleshooting__item">
+                                    <h3>{item.title}</h3>
+                                    <div className="troubleshooting__content">
+                                        <div className="troubleshooting__section">
+                                            <span className="label">문제 발생</span>
+                                            <p>{item.problem}</p>
+                                        </div>
+                                        <div className="troubleshooting__section">
+                                            <span className="label">원인 분석</span>
+                                            {Array.isArray(item.cause) ? (
+                                                <ul>
+                                                    {item.cause.map((cause, idx) => (
+                                                        <li key={idx}>{cause}</li>
+                                                    ))}
+                                                </ul>
+                                            ) : (
+                                                <p>{item.cause}</p>
+                                            )}
+                                        </div>
+                                        <div className="troubleshooting__section">
+                                            <span className="label">해결 과정</span>
+                                            <ul>
+                                                {item.solution.map((sol, idx) => (
+                                                    <li key={idx}>{sol}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div className="troubleshooting__section">
+                                            <span className="label">결과 및 개선 효과</span>
+                                            <p>{item.result}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                )}
+                ) : project.detail?.troubleshooting ? (
+                    <div className="project-detail__section">
+                        <h3>트러블 슈팅</h3>
+                        <div className="troubleshooting__list">
+                            {project.detail.troubleshooting.map((item, index) => (
+                                <div key={index} className="troubleshooting__item">
+                                    <h3>{item.title}</h3>
+                                    <div className="troubleshooting__content">
+                                        <div className="troubleshooting__section">
+                                            <span className="label">문제 발생</span>
+                                            <p>{item.problem}</p>
+                                        </div>
+                                        <div className="troubleshooting__section">
+                                            <span className="label">원인 분석</span>
+                                            {Array.isArray(item.cause) ? (
+                                                <ul>
+                                                    {item.cause.map((cause, idx) => (
+                                                        <li key={idx}>{cause}</li>
+                                                    ))}
+                                                </ul>
+                                            ) : (
+                                                <p>{item.cause}</p>
+                                            )}
+                                        </div>
+                                        <div className="troubleshooting__section">
+                                            <span className="label">해결 과정</span>
+                                            <ul>
+                                                {item.solution.map((sol, idx) => (
+                                                    <li key={idx}>{sol}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div className="troubleshooting__section">
+                                            <span className="label">결과 및 개선 효과</span>
+                                            <p>{item.result}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ) : null}
 
                 <div className="project-detail__section">
                     <h3>성과</h3>
-                    <p>{project.type === "팀 프로젝트" ? project.myRole.achievements : project.achievements}</p>
+                    <p>
+                        {project.type === "팀 프로젝트" 
+                            ? (project.myRole?.achievements || project.detail?.achievements) 
+                            : project.achievements}
+                    </p>
                 </div>
 
                 <div className="project-detail__tech">

@@ -130,6 +130,78 @@
                 }
             }
         }
+
+        .troubleshooting__list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .troubleshooting__item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--black100);
+
+            h3 {
+                font-size: 1.3rem;
+                color: #212529;
+                margin-bottom: 1.5rem;
+            }
+
+            .troubleshooting__content {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .troubleshooting__section {
+                .label {
+                    display: inline-block;
+                    padding: 6px 12px;
+                    background-color: #FFF3BF;
+                    color: #212529;
+                    border-radius: 20px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    color: var(--black200);
+                    line-height: 1.6;
+                    font-size: 1rem;
+                    margin-top: 10px;
+                }
+
+                ul {
+                    list-style: none;
+                    padding-left: 1.2rem;
+                    margin-top: 10px;
+
+                    li {
+                        position: relative;
+                        padding-left: 15px;
+                        color: var(--black200);
+                        margin-bottom: 0.5rem;
+                        line-height: 1.6;
+                        font-size: 1rem;
+
+                        &::before {
+                            content: "•";
+                            position: absolute;
+                            left: 0;
+                            color: var(--black200);
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &__image {
@@ -365,6 +437,28 @@
 
             p, li {
                 font-size: 1rem;
+            }
+
+            .troubleshooting__item {
+                background: var(--white);
+                border: 1px solid var(--black100);
+                padding: 1.2rem;
+
+                h3 {
+                    font-size: 1.2rem;
+                    margin-bottom: 1.2rem;
+                }
+
+                .troubleshooting__section {
+                    .label {
+                        font-size: 0.8rem;
+                        padding: 4px 10px;
+                    }
+
+                    p, ul li {
+                        font-size: 0.9rem;
+                    }
+                }
             }
         }
 
