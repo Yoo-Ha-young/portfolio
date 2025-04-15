@@ -26,11 +26,15 @@ const ProjectDetail = () => {
     ];
 
     const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % mediaItems.length);
+        if (mediaItems.length > 1) {
+            setCurrentSlide((prev) => (prev + 1) % mediaItems.length);
+        }
     };
 
     const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + mediaItems.length) % mediaItems.length);
+        if (mediaItems.length > 1) {
+            setCurrentSlide((prev) => (prev - 1 + mediaItems.length) % mediaItems.length);
+        }
     };
 
     return (
@@ -64,6 +68,16 @@ const ProjectDetail = () => {
                                 >
                                     {item.type === 'image' ? (
                                         <img src={item.src} alt={item.alt} />
+                                    ) : item.type === 'video' && item.src.includes('youtu.be') ? (
+                                        <iframe
+                                            width="100%"
+                                            height="100%"
+                                            src={`https://www.youtube.com/embed/${item.src.split('/').pop()}`}
+                                            title={item.title}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        />
                                     ) : (
                                         <video controls>
                                             <source src={item.src} type="video/mp4" />
@@ -115,9 +129,7 @@ const ProjectDetail = () => {
                         <h3>프로젝트 주요 기능</h3>
                         <ul className="project__detail-list">
                             {project.features.map((feature, index) => (
-                                <li key={index} className="project__detail-item">
-                                    {feature}
-                                </li>
+                                <li key={index} dangerouslySetInnerHTML={{ __html: feature }}/>
                             ))}
                         </ul>
                     </div>

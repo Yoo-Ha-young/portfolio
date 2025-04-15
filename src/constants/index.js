@@ -1,7 +1,7 @@
 export const introText = {
     mainTitle: "DEVELOPER YOOJIIN",
     title: "안녕하세요",
-    description: "저는 <strong>사용자 경험을 최우선으로 고려하는 백엔드 개발자</strong>입니다. <strong>Java와 Spring 기반 웹 애플리케이션을 개발</strong>하며 다양한 오류와 마주했지만, 그럴 때마다 <strong>원인을 끝까지 추적하고 해결해내는 과정</strong>을 통해 문제 해결력과 끈기를 키워왔습니다. <strong>백엔드뿐 아니라 프론트엔드도 함께 경험</strong>하면서 전체 서비스의 흐름을 이해하고 <strong>사용자 중심의 로직을 설계</strong>하는 데 집중해왔습니다. <strong>단순한 기능 구현을 넘어, 사용자에게 긍정적인 경험을 전달하는 안정적이고 효율적인 서비스</strong>를 만드는 것이 저의 목표입니다. <strong>기술적인 도전을 즐기며, 실제 프로젝트에서 배운 내용을 빠르게 실전에 적용</strong>해 성장해나가는 개발자가 되고자 합니다.",
+    description: "저는 <strong>사용자 경험을 최우선으로 고려하는 개발자</strong>입니다. <strong>Java와 Spring 기반의 웹 애플리케이션을 개발</strong>하며 다양한 오류를 마주했지만, <strong>원인을 끝까지 추적하고 해결해내는 과정</strong>에서 문제 해결력과 끈기를 키워왔습니다. <strong>백엔드뿐만 아니라 프론트엔드 개발과 UI/UX에도 관심</strong>을 가지고, 전체 서비스 흐름과 사용자 여정을 함께 설계하는 데 집중해왔습니다. 단순한 기능 구현을 넘어서, <strong>사용자에게 긍정적인 경험을 전달하는 안정적이고 효율적인 서비스</strong>를 만드는 것이 저의 목표입니다. <strong>다양한 기술적 도전을 즐기며</strong>, 프로젝트에서 배운 내용을 빠르게 실전에 적용해 <strong>계속해서 성장해나가고 있습니다</strong>.",
     links: {
         github: "https://github.com/Yoo-Ha-young",
         notion: "https://lateral-radar-0c1.notion.site/JI-IN-Portfolio-11d6828e560c80719687c44103dec734?pvs=4"
@@ -146,15 +146,16 @@ export const projectText = {
               type: "개인 프로젝트",
               position: "프론트엔드",
               contribution: "100%",
+              mainBanner: "/images/projects/portfolio.jpg",
               image: "/images/projects/portfolio.jpg",
               features: [
-                  "반응형 디자인으로 모바일/데스크톱 환경 최적화",
-                  "React와 React Router를 활용한 SPA 구현",
-                  "SCSS를 활용한 모듈화된 스타일링",
-                  "GSAP를 활용한 스크롤 애니메이션 효과",
-                  "프로젝트 상세 페이지 구현",
-                  "반응형 네비게이션 메뉴",
-                  "프로젝트 필터링 기능"
+                  "<div class='feature-item'>반응형 디자인으로 모바일/데스크톱 환경 최적화</div>",
+                  "<div class='feature-item'>React와 React Router를 활용한 SPA 구현</div>",
+                  "<div class='feature-item'>SCSS를 활용한 모듈화된 스타일링</div>",
+                  "<div class='feature-item'>GSAP를 활용한 스크롤 애니메이션 효과</div>",
+                  "<div class='feature-item'>프로젝트 상세 페이지 구현</div>",
+                  "<div class='feature-item'>반응형 네비게이션 메뉴</div>",
+                  "<div class='feature-item'>프로젝트 필터링 기능</div>"
               ],
               tech: ["React", "JavaScript", "SCSS", "GSAP", "React Router", "Vite", "GitHub Pages"],
               github: "https://github.com/Yoo-Ha-young/portfolio",
@@ -234,49 +235,39 @@ export const projectText = {
               title: "청년 정책 추천 서비스",
               period: "2023.11.01 - 2023.12.01",
               type: "팀 프로젝트",
-              position: "풀스택",
+              position: "프론트엔드, 백엔드",
               contribution: "66%",
+              mainBanner: "/images/projects/policy.png",
               image: "policy.png",
               features: [
-                "JWT 기반 회원가입 및 로그인/로그아웃 기능",
-                "로그인 후 자동 맞춤 정책 리스트 제공",
-                "지역, 카테고리, 세부 항목, 나이 기준 정책 검색 기능",
-                "정책 리스트 정렬 필터 (최신순, 마감순)",
-                "정책 상세 페이지 구현 (설명, 대상, 조건 등 확인 가능)",
-                "ChatGPT 및 LangChain 기반 챗봇 기능"
+                "<div class='feature-item'>JWT 기반 회원가입 및 로그인/로그아웃 기능</div>",
+                "<div class='feature-item'>로그인 후 자동 맞춤 정책 리스트 제공</div>",
+                "<div class='feature-item'>지역, 카테고리, 세부 항목, 나이 기준 정책 검색 기능</div>",
+                "<div class='feature-item'>정책 리스트 정렬 필터 (최신순, 마감순)</div>",
+                "<div class='feature-item'>정책 상세 페이지 구현 (설명, 대상, 조건 등 확인 가능)</div>",
+                "<div class='feature-item'>ChatGPT 및 LangChain 기반 챗봇 기능</div>"
+                
               ],
               tech: ["React", "JavaScript", "Java 17", "Spring Boot", "Spring Security", "JPA", "MySQL", "Axios", "Vercel", "Render", "OpenAI API"],
               github: "https://github.com/Youth-Policy-recommendation-project",
               notion: "https://lateral-radar-0c1.notion.site/13e6828e560c818a9539e4f92d752239?pvs=4",
               media: [
-                { "type": "image", "src": "/images/projects/policy.png", "alt": "청년 정책 추천 서비스" },
-                { "type": "video", "src": "/image/projects/policy.mp4", "title": "정책 추천 서비스 데모 영상" }
+                { type: "video", src: "/images/projects/policy.mp4", title: "정책 추천 서비스 데모 영상" }
               ],
               detail: {
                 background: "청년층의 정책 정보 접근성을 높이기 위해 기획된 프로젝트입니다. 사용자의 나이, 지역, 관심 카테고리 등 조건에 따라 맞춤형 정책 리스트를 자동으로 제공하며, 상세 검색도 가능합니다. React와 Spring Boot를 활용해 프론트와 백엔드를 모두 구현했으며, 별도의 챗봇 기능도 함께 제공합니다.",
-                challenges: [
-                  "Spring 기반 인증/인가 및 JWT 토큰 발급 구조 설계",
-                  "JPA를 활용한 복합 조건(지역, 카테고리, 나이 등) 검색 로직 구현",
-                  "프론트엔드 설문 응답 및 결과 흐름 관리",
-                  "정책 리스트 정렬(최신순/마감순) 기능 구현",
-                  "프론트와 백엔드 간 CORS 오류 처리 및 배포 연동"
-                ],
-                solutions: [
-                  "Spring Security와 JWT를 활용한 사용자 인증 구조 구축",
-                  "정책 조건에 따라 필터링 가능한 다중 조건 검색 API 구현",
-                  "React Hooks 기반 상태 관리 및 Axios 통신 구성",
-                  "정책 리스트를 최신순/마감순으로 정렬하는 정렬 로직 구현",
-                  "WebMvcConfigurer로 CORS 정책 설정 및 환경변수 분리 배포 구성"
-                ]
+
               },
               myRole: {
                 features: [
-                  "<strong>프론트엔드 구현</strong>: React 기반 설문, 추천, 검색, 상세 페이지 전체 개발",
-                  "<strong>백엔드 구현</strong>: Spring Boot + JPA 기반 정책 필터링 및 검색 API 전체 개발",
-                  "JWT 인증 및 Spring Security 설정",
-                  "Axios 비동기 요청 처리 및 상태 전환 최적화",
-                  "DB 설계 및 테스트용 H2 → 운영 MySQL 전환",
-                  "Vercel / Render 배포 구성 및 환경 변수 분리"
+                  "<div class='feature-section'><strong>프론트엔드 구현</strong></div>",
+                  "<div class='feature-item'>React 기반 설문, 추천, 검색, 상세 페이지 전체 개발</div>",
+                  "<div class='feature-section'><strong>백엔드 구현</strong></div>",
+                  "<div class='feature-item'>Spring Boot + JPA 기반 정책 필터링 및 검색 API 전체 개발</div>",
+                  "<div class='feature-item'>JWT 인증 및 Spring Security 설정</div>",
+                  "<div class='feature-item'>Axios 비동기 요청 처리 및 상태 전환 최적화</div>",
+                  "<div class='feature-item'>DB 설계 및 테스트용 H2 → 운영 MySQL 전환</div>",
+                  "<div class='feature-item'>Vercel / Render 배포 구성 및 환경 변수 분리</div>"
                 ],
                 description: "프론트엔드(React)와 백엔드(Spring Boot)를 단독으로 개발한 팀 프로젝트입니다. 설문-추천-검색 흐름을 자연스럽게 연결하고, 정책 리스트 및 상세페이지까지 전체 사용자 플로우를 구현했습니다. 로그인 시 자동 추천, 조건 검색, 정렬 필터 등 주요 기능을 모두 설계하고 구현했습니다.",
                 troubleshooting: [
@@ -336,22 +327,22 @@ export const projectText = {
               type: "팀 프로젝트",
               position: "백엔드",
               contribution: "25%",
+              mainBanner: "/images/projects/popit.jpg",
               image: "popit.jpg",
               features: [
-                  "회원가입 및 로그인 기능 구현",
-                  "내 주변 5키로 반경 내 스토어 찾기",
-                  "지도 검색 및 이동 기능",
-                  "스토어 디테일 및 분류 기능",
-                  "셀러 등록 시스템",
-                  "스토어/상품 등록 및 수정",
-                  "게시글/댓글 등록 및 수정",
-                  "스토어 찜하기와 알림 기능"
+                  "<div class='feature-item'>회원가입 및 로그인 기능 구현</div>",
+                  "<div class='feature-item'>내 주변 5키로 반경 내 스토어 찾기</div>",
+                  "<div class='feature-item'>지도 검색 및 이동 기능</div>",
+                  "<div class='feature-item'>스토어 디테일 및 분류 기능</div>",
+                  "<div class='feature-item'>셀러 등록 시스템</div>",
+                  "<div class='feature-item'>스토어/상품 등록 및 수정</div>",
+                  "<div class='feature-item'>게시글/댓글 등록 및 수정</div>",
+                  "<div class='feature-item'>스토어 찜하기와 알림 기능</div>"
               ],
               tech: ["Java 11", "Spring Boot", "JPA", "MariaDB", "Spring Security", "AWS EC2", "AWS RDS", "Swagger 2.0", "Lombok", "Docker"],
               github: "https://github.com/popit-project/backend",
               notion: "https://zero-base.oopy.io/1302b8ad-806c-81df-8372-cdb57bd16027",
               media: [
-                  { type: 'image', src: '/images/projects/popit.jpg', alt: 'POP-IT: 스토어 커넥트' },
                   { type: 'video', src: '/images/projects/register.mp4', title: '회원가입, 로그인, 구글로그인, 입점신청 데모' }
               ],
               detail: {
@@ -375,13 +366,13 @@ export const projectText = {
               },
               myRole: {
                   features: [
-                      "<strong>회원가입 및 로그인 기능 구현</strong>",
-                      "Spring Security 설정 및 JWT 토큰 기반 인증 구현",
-                      "사용자 엔티티 설계 및 권한 관리 시스템 구현",
-                      "<strong>셀러 등록 시스템 개발</strong>",
-                      "스토어와 사용자 간의 연관 관계 설정",
-                      "이메일 중복 체크 및 유효성 검사 로직 구현",
-                      "트랜잭션 처리를 통한 데이터 일관성 보장"
+                      "<div class='feature-section'><strong>회원가입 및 로그인 기능 구현</strong></div>",
+                      "<div class='feature-item'>Spring Security 설정 및 JWT 토큰 기반 인증 구현</div>",
+                      "<div class='feature-item'>사용자 엔티티 설계 및 권한 관리 시스템 구현</div>",
+                      "<div class='feature-section'><strong>셀러 등록 시스템 개발</strong></div>",
+                      "<div class='feature-item'>스토어와 사용자 간의 연관 관계 설정</div>",
+                      "<div class='feature-item'>이메일 중복 체크 및 유효성 검사 로직 구현</div>",
+                      "<div class='feature-item'>트랜잭션 처리를 통한 데이터 일관성 보장</div>",
                   ],
                   
                   troubleshooting: [
@@ -425,7 +416,99 @@ export const projectText = {
                   achievements: "이러한 구현을 통해 다음과 같은 성과를 달성했습니다:\n- 사용자 인증, 셀러 등록, 스토어 연동 등 핵심 로직 구현을 통한 실무적 이해도 향상\n- Spring Security와 JWT 구조를 직접 다루며 보안 설계 역량 강화\n- 도메인 간 관계 설계를 통한 확장성 있는 구조 설계 경험\n- 공통 예외 처리 구조와 유효성 검증 구현을 통한 서비스 안정성 확보\n- 다양한 트러블슈팅 경험을 통해 문제 해결 능력 향상"
               },
               description: "한시적으로 팝업스토어나 플리마켓을 운영하는 청년 사업자와 소상공인을 지원하기 위한 어플리케이션입니다. 이 어플리케이션은 판매자의 상품 관리와 고객과의 상호작용, 로그인/회원가입 기능, 어드민 기능 등을 제공합니다. 스토어 커넥트는 오프라인 팝업스토어와 플리마켓에서의 활동을 온라인 플랫폼으로 확장하여 소비자와 사업자 간의 소통과 거래를 원활하게 돕습니다."
+          },
+          {
+            id: "0204",
+            title: "Sesac-iCare",
+            period: "2024.02.01 - 2024.03.15",
+            type: "팀 프로젝트",
+            position: "UX/UI 디자인 · 백엔드 · AI",
+            contribution: "50%",
+            mainBanner: "/images/projects/icare.png",
+            image: "icare.png",
+            features: [
+                "<div class='feature-item'>이미지 기반 처방전 업로드 및 복약 이력 관리 기능</div>",
+                "<div class='feature-item'>사용자 위치 기반 약국 및 병원 검색 기능</div>",
+                "<div class='feature-item'>챗봇을 통한 병원/약국 검색 및 위치 안내</div>",
+                "<div class='feature-item'>JWT 기반 회원가입 및 로그인/로그아웃</div>"
+              ],
+            tech: [
+              "Python", "Django", "JPA", "MySQL", 
+              "GPT-3.5", "CLOVA OCR", "React Native", "JavaScript", 
+              "Creatie", "Docker", "OpenAI API", "Swagger"
+            ],
+            github: "https://github.com/Sesac-icare",
+            notion: "https://www.notion.so/1a56828e560c8051ad76e1922d1030d9",
+            media: [
+              { type: "video", src: "https://youtu.be/H0RPgUf6_xo", title: "Sesac-iCare 데모 영상" }
+            ],
+            detail: {
+              background: "초보 부모들이 아이의 건강 문제에 직면했을 때, 24시간 병원 및 약국 정보 부족으로 인해 신속하고 적절한 대처가 어려운 상황이 발생하고 있습니다. 또한, 건강관리와 관련된 신뢰할 수 있는 정보를 효율적으로 얻기 어려운 점도 문제로 지적됩니다. 본 프로젝트는 이러한 문제를 해결하기 위해 의료 접근성을 향상시키고, 사용자 친화적인 건강관리 솔루션을 제공함으로써 부모들이 더 나은 의사결정을 내릴 수 있도록 지원하는 프로젝트입니다.",
+              challenges: [
+                "실시간 API 호출 방식에서 발생하는 데이터 누락",
+                "다양한 처방전 양식에 대한 OCR 인식률 저하",
+                "Docker 빌드 환경의 캐시 및 볼륨 충돌 문제",
+                "사용자 친화적인 정보 구조와 흐름 설계"
+              ],
+              solutions: [
+                "실시간 요청 대신 Cron Job 기반의 데이터 일괄 수집 구조로 전환",
+                "GPT를 활용한 OCR 결과 후처리 및 데이터 정제 자동화",
+                "Docker 캐시 및 이미지/볼륨 완전 초기화 후 재빌드로 안정성 확보",
+                "피그마 기반 와이어프레임 및 컴포넌트 UI 구성으로 일관된 사용자 경험 설계"
+              ]
+            },
+            myRole: {
+                features: [
+                    "<div class='feature-section'><strong>백엔드 및 AI</strong></div>",                 
+                    "<div class='feature-item'>이미지 기반 처방전 업로드 및 복약 이력 관리 기능 구현 : CLOVA OCR → GPT 연동을 통한 비정형 문서 자동 추출 및 정제 처리</div>",
+                    "<div class='feature-item'>공공 API 기반 병원/약국 데이터 수집 및 사용자 위치 기반 검색 기능 구현 (Spring Scheduler 활용)</div>",
+                    "<div class='feature-item'>GPT + LangChain 기반 챗봇 기능 설계 및 병원/약국 위치 안내 자동화</div>",
+                    "<div class='feature-item'>JWT 기반 회원가입 및 로그인/로그아웃 기능 구현 (Spring Security)</div>",
+                    "<div class='feature-item'>RESTful API 설계 및 Swagger 기반 API 명세 문서화</div>",
+
+                    "<div class='feature-section'><strong>프론트엔드</strong></div>",                 
+                    "<div class='feature-item'>프론트엔드와의 API 연동을 위한 CORS 처리 및 응답 구조 정비</div>",
+                    "<div class='feature-section'><strong>UX/UI 디자인</strong></div>",                 
+                    "<div class='feature-item'>Figma 기반 화면 흐름 설계 및 실제 반응형 UI 구현</div>"
+                ],
+              description: "팀 내에서 UX 흐름을 구상하고 실제 피그마로 시각화한 후, 프론트/백엔드 개발 전반에서 핵심 기능을 구현했습니다. 특히 OCR + GPT 기반 자동화 처리 흐름을 설계하며, 다양한 처방전 구조에도 일관되게 대응할 수 있는 유연한 데이터 구조를 구성했습니다. 또한 API 명세 문서화와 배포 환경에서도 문제 해결을 주도하며 실전 감각을 키웠습니다.",
+              troubleshooting: [
+                {
+                  title: "📡 실시간 API 호출로 인한 데이터 누락",
+                  problem: "외부 기관 API 호출 시 간헐적으로 응답 실패 및 데이터 누락 발생",
+                  cause: "실시간 요청 실패 시 별도 복구 로직이 없어 데이터 유실됨",
+                  solution: [
+                    "Spring Scheduler 기반 Cron Job으로 주기적 수집 구조 변경",
+                    "일괄 응답 처리 및 재처리 로직 구성"
+                  ],
+                  result: "데이터 안정성 확보 및 외부 장애 복원력 강화"
+                },
+                {
+                  title: "📄 OCR 인식률 한계 및 구조화 실패",
+                  problem: "CLOVA OCR만으로 다양한 처방전 레이아웃을 정확히 인식하지 못함",
+                  cause: "비정형 문서에 대한 OCR 성능 제한 및 후처리 부족",
+                  solution: [
+                    "OCR 결과를 GPT에 입력해 주요 키워드 추출 및 재구성",
+                    "추출 결과를 JSON 포맷으로 표준화"
+                  ],
+                  result: "일관된 구조의 데이터 확보 및 후속 기능 연동 용이"
+                },
+                {
+                  title: "🐳 Docker 빌드 실패 및 실행 충돌",
+                  problem: "기존 이미지/볼륨 충돌로 컨테이너 실행 오류 반복 발생",
+                  cause: "이전 캐시와 설정이 잔존하여 환경 불일치",
+                  solution: [
+                    "docker system prune -a 로 불필요한 리소스 정리",
+                    "컨테이너/이미지/볼륨 완전 초기화 후 재빌드"
+                  ],
+                  result: "정상적인 빌드/배포 환경 확보 및 반복 오류 제거"
+                }
+              ],
+              achievements: "백엔드, AI, UX 전반을 아우르며 유의미한 서비스를 구현했습니다. 비정형 데이터 처리와 사용자 흐름 설계를 조화롭게 결합한 경험을 통해 실무에 가까운 설계와 기술 응용 능력을 체득할 수 있었습니다."
+            },
+            description: "OCR 및 GPT 기반 문서 처리 기술을 바탕으로 복약 정보를 자동 정제하고 요약하는 건강관리 서비스입니다. 사용자의 처방 이력을 구조화된 데이터로 변환하여 지속적인 건강관리 기능을 제공합니다."
           }
+          
       ]
   }
 };
